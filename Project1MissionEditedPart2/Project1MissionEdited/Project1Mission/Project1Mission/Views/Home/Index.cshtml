@@ -1,0 +1,34 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<head>
+    <link href="~/Content/Styles.css" rel="stylesheet" />
+</head>
+
+<div class="jumbotron" id="override-jumbotron">
+    <center><h1 id="jumboText">FMG Suite Phone Reporting</h1></center>
+    <center><p class="lead" id="jumboText">Summarize hourly reports seemlessly with our new reporting system</p></center>
+    <center><p><a href="@Url.Action("Index", "Report")" class="btn btn-primary btn-lg" id="override-callToAction">Stop Slacking Reports Now&raquo;</a></p></center>
+</div>
+
+<h2>Sample Data Dashboard</h2>
+
+<div class='tableauPlaceholder' id='viz1541710435799' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;VG&#47;VGContest_SuperSampleSuperstore_RyanSleeper&#47;SuperDescriptive&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='VGContest_SuperSampleSuperstore_RyanSleeper&#47;SuperDescriptive' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;VG&#47;VGContest_SuperSampleSuperstore_RyanSleeper&#47;SuperDescriptive&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>
+<script type='text/javascript'>var divElement = document.getElementById('viz1541710435799');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>Enter Data </h2>
+        <p>
+            Enter customer data into our database
+        </p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>View Data</h2>
+        <p>View and edit data stored in our database</p>
+        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+
+</div>

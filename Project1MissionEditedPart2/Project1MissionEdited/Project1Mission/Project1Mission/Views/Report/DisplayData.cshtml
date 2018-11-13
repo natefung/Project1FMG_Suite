@@ -1,0 +1,189 @@
+﻿@model IEnumerable<Project1Mission.Models.HourlyReport>
+@{
+    ViewBag.Title = "DisplayData";
+}
+<head>
+    <link href="~/Content/Styles.css" rel="stylesheet" />
+</head>
+<div class="jumbotron" id="override-jumbotron">
+    <center><h1 id="jumboText">FMG Suite Phone Reporting</h1></center>
+    <center><p class="lead" id="jumboText">Sample Data Entry Page</p></center>
+    <center><p><a href="@Url.Action("Index", "Report")" class="btn btn-primary btn-lg" id="override-callToAction">Submit your hourly report now! &raquo;</a></p></center>
+</div>
+<h4>
+    @Html.ActionLink("Submit New Report", "Index", "Report", null, new { style = "color:white" })
+</h4>
+<br>
+<b><u>|FMG|</u></b>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.fmgAvgHoldTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fmgAvgSpeedAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fmgMaxHoldTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fmgAbandoned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fmgNumberOfAcceptedCalls)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fmgPercentAbandoned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.fmgAvgAbandonTime)
+        </th>
+    </tr>
+</table>
+<b><u>|ENT|</u></b>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.entAvgHoldTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entAvgSpeedAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entMaxHoldTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entAbandoned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entNumberOfAcceptedCalls)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entPercentAbandoned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.entAvgAbandonTime)
+        </th>
+    </tr>
+</table>
+<b><u>|ALP|</u></b>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.alpAvgHoldTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alpAvgSpeedAnswer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alpMaxHoldTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alpAbandoned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alpNumberOfAcceptedCalls)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alpPercentAbandoned)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.alpAvgAbandonTime)
+        </th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    |
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fmgAvgHoldTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fmgAvgSpeedAnswer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fmgMaxHoldTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fmgAbandoned)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fmgNumberOfAcceptedCalls)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fmgPercentAbandoned)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.fmgAvgAbandonTime)
+                </td>
+                <td>
+                    |
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.entAvgHoldTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.entAvgSpeedAnswer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.entMaxHoldTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.entAbandoned)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.entNumberOfAcceptedCalls)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.entPercentAbandoned)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.entAvgAbandonTime)
+                </td>
+                <td>
+                    |
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alpAvgHoldTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alpAvgSpeedAnswer)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alpMaxHoldTime)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alpAbandoned)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alpNumberOfAcceptedCalls)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alpPercentAbandoned)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.alpAvgAbandonTime)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+        }
+    }
+    else
+    {
+        //Do nothing
+    }
+</table>
+@if (Model == null)
+{
+    <h4>@ViewBag.Nothing</h4>
+    <br>
+    <br>
+}
