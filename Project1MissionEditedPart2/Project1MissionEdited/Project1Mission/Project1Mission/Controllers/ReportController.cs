@@ -42,7 +42,7 @@ namespace Project1Mission.Controllers
                 ViewBag.Nothing = "No data is available to present!  Please add in some data.";
             }
 
-            return View();
+            return View(lstHourlyReport.ToList());
         }
     }
 }
